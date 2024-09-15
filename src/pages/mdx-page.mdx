@@ -1,27 +1,25 @@
 ---
 layout: ../layouts/MarkdownLayout.astro
-title: MDX Page
+title: EinsteinDB and MilevaDB are Friendly to sequential writes with heavy workloads
 ---
 
 import { Icon } from 'astro-icon/components'
 import { Notification } from 'accessible-astro-components'
 
-# MDX Page
+#A Distributed Storage Solution for Large-Scale RDBMS
 
 <Notification type="info">
   <Icon name="ion:information-circle-outline" />
   <p>
-    <strong>Info:</strong> This page utilizes Astro's MDX feature which let's you use components in a markdown file and
-    supports out-of-the-box syntax highlighting with Shiki.
+    <strong>Info:</strong>  EinsteinDB supports a multi-level sharding strategy, which uses hash in the uppermost layer, while in each hash-based sharding unit, data is stored in causal order elements named Causets.
   </p>
 </Notification>
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae veniam repellat deleniti obcaecati facilis non, praesentium aperiam laudantium excepturi assumenda doloremque animi quis aliquam eligendi quia nemo asperiores et eaque, sunt voluptatibus, saepe exercitationem id. Quis sequi maxime fugiat nam reprehenderit nesciunt quaerat obcaecati, ipsa dignissimos voluptatum voluptatem, optio quidem quos repudiandae dolorem voluptatibus fuga officia odio nemo recusandae voluptas.
+We support scanning with the stored data generally having a relational table schema, when you want the data of the same table to be as close as possible. EinsteinDB uses multiple Raft groups, which can be combined with a schema-free sharding strategy whose implementation of horizontal scalability is simple.
 
 ```js
 console.log('Hello Accessible World!')
 ```
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae veniam repellat deleniti obcaecati facilis non, praesentium aperiam laudantium excepturi assumenda doloremque animi quis aliquam eligendi quia nemo asperiores et eaque, sunt voluptatibus, saepe exercitationem id. Quis sequi maxime fugiat nam reprehenderit nesciunt quaerat obcaecati, ipsa dignissimos voluptatum voluptatem, optio quidem quos repudiandae dolorem voluptatibus fuga officia odio nemo recusandae voluptas.
-
+MilevaDB integrate the scheduler and the routing table into one module using FIDel.
 [Get this theme on GitHub](https://github.com/markteekman/accessible-astro-starter)
